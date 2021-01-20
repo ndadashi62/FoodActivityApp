@@ -54,6 +54,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="150dp"
+            android:textAlignment="center"
             android:hint="Thank you message">
 
 
@@ -63,6 +64,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="40dp"
+            android:textAlignment="center"
             android:text="Go Back to Main Activity"
             android:textColor="@color/black"
             android:background="#A9EDE7E7">
