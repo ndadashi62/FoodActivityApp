@@ -8,4 +8,6 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="welcomeColor">#9D3D34</color>
+    <color name ="welcomebackgroundColor">#DAA4D4F7</color>
+    <color name ="orderactivitytextviewtextcolor">#1E330E</color>
 </resources>
