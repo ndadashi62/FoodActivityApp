@@ -1,4 +1,6 @@
 <resources>
     <string name="app_name">FoodActivityApp</string>
     <string name="please_enter_your_name">please enter your name</string>
+    <string name="welcome">Welcome:</string>
+    <string name="food_activity_app">Food Activity App</string>
 </resources>
