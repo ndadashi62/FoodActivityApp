@@ -29,7 +29,8 @@
             </TextView>
 
             <EditText
-                android:layout_width="match_parent"
+                android:id="@+id/editTextCostumerName"
+                android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:hint="@string/please_enter_your_name"
                 android:textColor="#FFFFFF">
@@ -87,10 +88,12 @@
             android:orientation="horizontal">
 
             <RadioGroup
+                android:id="@+id/radioGroup"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content">
 
                 <RadioButton
+                    android:id="@+id/radioWilensky"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Wilensky's Special">
@@ -99,6 +102,7 @@
                 </RadioButton>
 
                 <RadioButton
+                    android:id="@+id/radioPutine"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Poutine">
@@ -107,7 +111,7 @@
                 </RadioButton>
 
                 <RadioButton
-
+                    android:id="@+id/radioPizza"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Pizza">
@@ -115,6 +119,7 @@
                 </RadioButton>
 
                 <RadioButton
+                    android:id="@+id/radioBurger"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Burger">
@@ -122,6 +127,7 @@
                 </RadioButton>
 
                 <RadioButton
+                    android:id="@+id/radioGreenSalad"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Green Salad">
@@ -129,6 +135,7 @@
                 </RadioButton>
 
                 <RadioButton
+                    android:id="@+id/radioBagles"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Bagels">
