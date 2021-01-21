@@ -19,12 +19,6 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-
-
-
-
-
-
         btnOrder.setOnClickListener {
             order()
         }
@@ -33,44 +27,67 @@ class MainActivity : AppCompatActivity() {
 
     fun order() {
 
+        val intent = Intent(this@MainActivity, OrderActivity::class.java)
+        var tvDisplaCostumerName: String = editTextCostumerName.text.toString()
+        if (tvDisplaCostumerName.isNullOrEmpty()) {
+            Toast.makeText(this, "please enter your name", Toast.LENGTH_SHORT).show()
+            return
+        }
+        intent.putExtra("costumername", tvDisplaCostumerName)
+
+
 
         if (radioWilensky.isChecked == true) {
-            val intent = Intent(this@MainActivity, OrderActivity::class.java)
-
-            var tvDisplaCostumerName: String = editTextCostumerName.text.toString()
 
             var wilensky: String = radioWilensky.text.toString()
-
-          //  var poutine: String = radioWilensky.text.toString()
-            //var pizza: String = radioWilensky.text.toString()
-           // var burger: String = radioWilensky.text.toString()
-           // var greenSalad: String = radioWilensky.text.toString()
-           // var bagales: String = radioWilensky.text.toString()
-            
-            intent.putExtra("costumername", tvDisplaCostumerName)
-
             intent.putExtra("wilsky", wilensky)
-           // intent.putExtra("poutine", poutine)
-            //intent.putExtra("pizza", pizza)
-           // intent.putExtra("burger", burger)
-           // intent.putExtra("greenSalad", greenSalad)
-           // intent.putExtra("bageles", bagales)
+            startActivity(intent)
+        }
+         else if  (radioPutine.isChecked == true) {
 
+            var poutine: String = radioPutine.text.toString()
+            intent.putExtra("poutine", poutine)
+            startActivity(intent)}
+
+        else if (radioPizza.isChecked == true) {
+
+            var pizza: String = radioPizza.text.toString()
+            intent.putExtra("pizza", pizza)
             startActivity(intent)
 
+        } else if (radioBurger.isChecked == true) {
 
+            var burger: String = radioBurger.text.toString()
+            intent.putExtra("burger", burger)
+            startActivity(intent)}
+
+        else  if (radioGreenSalad.isChecked == true) {
+
+            var greenSalad: String = radioGreenSalad.text.toString()
+          intent.putExtra("greenSalad", greenSalad)
+           startActivity(intent)
+      }
+
+        else  if (radioBagles.isChecked == true) {
+
+            var bagles: String = radioBagles.text.toString()
+            intent.putExtra("bagles", bagles)
+            startActivity(intent)
         }
 
+       else( Toast.makeText(this, "you didnt select your food ", Toast.LENGTH_SHORT).show())
+
+//        btnFinish.setOnClickListener {
+//
+//            finish();
+//            System.exit(0);
+//        }
 
     }
 
 
+
 }
-
-
-
-
-
 
 
 
