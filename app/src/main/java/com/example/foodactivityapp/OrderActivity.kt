@@ -19,32 +19,31 @@ class OrderActivity : AppCompatActivity() {
 
 
 
+        textViewCustomerName.setText(intent.getStringExtra("costumername"))
 
-        var displaycustumername = intent.getStringExtra("costumername")
-        var tvdisplaycostumername = textViewCustomerName.setText(displaycustumername)
+        if(!intent.getStringExtra("key").isNullOrEmpty()){
+            textViewDisplayOrderName.text =intent.getStringExtra("key")
+        }
 
-        var wilsky = intent.getStringExtra("wilsky")
-        var tvWilsky = textViewDisplayOrderName.setText(wilsky)
 
-       var poutine = intent.getStringExtra("poutine")
-        var tvpoutine = textViewDisplayOrderName.setText(poutine)
+//        textViewDisplayOrderName.setText(intent.getStringExtra("pizza"))
+//
+//        textViewDisplayOrderName.setText(intent.getStringExtra("burger"))
+//
+//         textViewDisplayOrderName.setText(intent.getStringExtra("greenSalad"))
+//
+//        textViewDisplayOrderName.setText(intent.getStringExtra("bagles"))
+//
 
-       var pizza = intent.getStringExtra("pizza")
-        var tvpizza = textViewDisplayOrderName.setText(pizza)
 
-       var burger = intent.getStringExtra("burger")
-       var tvBurger = textViewDisplayOrderName.setText(burger)
-
-        var greenSalad = intent.getStringExtra("greenSalad")
-       var tvGreenSalad = textViewDisplayOrderName.setText(greenSalad)
-
-        var bagles = intent.getStringExtra("bagles")
-        var tvbagles = textViewDisplayOrderName.setText(bagles)
 
         btnGoBack.setOnClickListener {
-            val intent = Intent(this@OrderActivity, MainActivity::class.java)
-            startActivity(intent)
+           finish()
         }
+
+    }
+
+    override fun onBackPressed() {
 
     }
 }
